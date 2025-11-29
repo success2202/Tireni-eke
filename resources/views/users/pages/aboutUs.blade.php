@@ -483,7 +483,7 @@ height: 300px;
     <div class="about-hero-content">
       <h1>About Us</h1>
       <nav class="breadcrumb">
-        <a href="/">Home</a> <span> / </span>
+        <a href="{{ route('users.home') }}">Home</a> <span> / </span>
         <span>About</span>
       </nav>
     </div>

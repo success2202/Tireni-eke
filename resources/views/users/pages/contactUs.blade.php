@@ -277,13 +277,13 @@ var pbmit_js_variables = {"responsive":null,"ajaxurl":"https:\/\/agrimo-demo.pbm
 									<div class="menu-main-menu-container">
                                         <ul id="pbmit-top-menu" class="menu">
 <li id="menu-item-23" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-23">
-<a href="{{route('dashboard')}}">Home</a>
+<a href="{{route('users.home')}}">Home</a>
 </li>
 <li id="menu-item-4488" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4488">
-    <a href="{{route('page.aboutUs')}}">About-us</a>
+    <a href="{{route('users.about-us')}}">About-us</a>
 </li>
 <li id="menu-item-4504" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4504">
-    <a href="{{route('page.contact')}}">Contact-us</a>
+    <a href="{{route('users.contact-us')}}">Contact-us</a>
 </li>
 {{-- <li id="menu-item-4489" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4489">
     <a href="#">Portfolio</a>
@@ -301,7 +301,7 @@ var pbmit_js_variables = {"responsive":null,"ajaxurl":"https:\/\/agrimo-demo.pbm
 					<div class="pbmit-logo-menuarea d-flex align-items-center">
 						<div class="site-branding pbmit-logo-area">
 							<div class="wrap">
-								<h1 class="site-title"><a href="{{route('dashboard')}}" rel="home"><span class="site-title-text">Tireni Eke Global - Solutions Ltd.</span><img class="pbmit-main-logo" src="images/logo/log.png" alt="Tireni eke" title="Tireni Eke Solutions" /></a></h1><!-- Logo area -->
+								<h1 class="site-title"><a href="{{route('users.home')}}" rel="home"><span class="site-title-text">Tireni Eke Global - Solutions Ltd.</span><img class="pbmit-main-logo" src="images/logo/log.png" alt="Tireni eke" title="Tireni Eke Solutions" /></a></h1><!-- Logo area -->
 							</div><!-- .wrap -->
 						</div><!-- .site-branding -->
 					</div>			
@@ -345,7 +345,7 @@ var pbmit_js_variables = {"responsive":null,"ajaxurl":"https:\/\/agrimo-demo.pbm
     <div class="about-hero-content">
       <h1>Contact Us</h1>
       <nav class="breadcrumb">
-        <a href="/">Home</a> <span> / </span>
+        <a href="{{ route('users.home') }}">Home</a> <span> / </span>
         <span>Contact Us</span>
       </nav>
     </div>
