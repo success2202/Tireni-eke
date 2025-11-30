@@ -436,7 +436,7 @@ height: 300px;
 					<div class="pbmit-logo-menuarea d-flex align-items-center">
 						<div class="site-branding pbmit-logo-area">
 							<div class="wrap">
-								<h1 class="site-title"><a href="{{route('users.home')}}" rel="home"><span class="site-title-text">Tireni Eke Global - Solutions Ltd.</span><img class="pbmit-main-logo" src="images/logo/log.png" alt="Tireni eke" title="Tireni Eke Solutions" /></a></h1><!-- Logo area -->
+								<h1 class="site-title"><a href="{{route('users.home')}}" rel="home"><span class="site-title-text">Tireni Eke Global - Solutions Ltd.</span><img class="pbmit-main-logo" src="{{ asset('assets/'.$settings->logo) }}" alt="Tireni eke" title="Tireni Eke Solutions" /></a></h1><!-- Logo area -->
 							</div><!-- .wrap -->
 						</div><!-- .site-branding -->
 					</div>			
@@ -444,7 +444,7 @@ height: 300px;
 						<div class="pbmit-button-box">
 												<div class="pbmit-header-button">
 				<a href="tel:+1(212)-255-511">
-			<span class="pbmit-header-button-text-1">Call us Now</span>			<span class="pbmit-header-button-text-2">+1(212)255-511</span>		</a>
+			<span class="pbmit-header-button-text-1">Call us Now</span>			<span class="pbmit-header-button-text-2">{{ $settings->site_phone }}</span>		</a>
 					</div>
 										</div>
 						{{-- <div class="pbmit-search-cart-box">							
@@ -453,7 +453,7 @@ height: 300px;
 									<div class="pbmit-button-box-second">
 							
 				<a href="contact-us/index.html">
-			<span class="pbmit-header-button2-text">Get In Touch</span><span class="pbmit-button-icon-wrapper"><span class="pbmit-button-icon"></span></span>		</a>
+			<span class="pbmit-header-button2-text">{{ $settings->site_email }}</span><span class="pbmit-button-icon-wrapper"><span class="pbmit-button-icon"></span></span>		</a>
 					
 					
 						</div>
