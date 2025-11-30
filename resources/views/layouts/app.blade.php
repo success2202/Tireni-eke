@@ -12,7 +12,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="profile" href="https://gmpg.org/xfn/11">
-<title>Agrimo Demo 2 &#8211; Agriculture &amp; Organic Farm WordPress Theme</title>
+<title>Tireni Eke &#8211; Global &amp; Solutions Ltd</title>   
 <meta name='robots' content='max-image-preview:large' />
 	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
 	<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />

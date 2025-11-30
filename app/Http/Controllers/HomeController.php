@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\About;
+use App\Models\Setting;
 use App\Models\Services;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -17,13 +18,16 @@ class HomeController extends Controller
 
      public function AboutUs()
     {
-        return view('users.pages.aboutUs');
-        // ->with('blogs', Blog::latest()->get());
+         
+        return view('users.pages.aboutUs')
+         ->with('about', About::whereIn('id', [1, 2, 3])->get())
+         ->with('about2', About::whereIn('id', [4, 5])->get());
     }
 
     public function ContactUs()
     {
-        return view('users.pages.contactUs');
+        return view('users.pages.contactUs')
+        ->with('settings', Setting::latest()->first());
     }
 
 }

@@ -503,18 +503,16 @@ height: 300px;
 
         <!-- COL 2: TEXT PART 1 -->
         <div class="col-12 col-md-4">
-            <h4>Who We Are</h4>
+	@foreach ($about as $item )
+				
+			
+            <h4>{{ $item->title }}</h4>
             <p>
-                Tireni Eke Global Solutions Ltd is a female-owned and managed agribusiness based in Lagos, Nigeria.
-                Our focus is organic fonio cultivation and value-chain development built on traceability,
-                sustainability, and women’s empowerment.
+                {!! $item->contents !!}
             </p>
-            <p>
-                As we grow, we continue exploring other organic produce—always guided by our belief that agriculture
-                should nourish both people and the planet.
-            </p>
-
-            <h4>Vision</h4>
+            
+@endforeach
+            {{-- <h4>Vision</h4>
             <p>
                 To be a leading force in Africa’s sustainable agriculture sector—driving global recognition for
                 Nigeria’s fonio while creating inclusive opportunities for women and rural communities.
@@ -524,29 +522,26 @@ height: 300px;
             <p>
                 To cultivate, process, and export traceable, organic fonio through environmentally responsible and
                 socially inclusive systems.
-            </p>
+            </p> --}}
         </div>
 
         <!-- COL 3: TEXT PART 2 + CONTACT BUTTON -->
         <div class="col-12 col-md-4">
-            <h4>Our Core Values</h4>
+@foreach ( $about2 as $item )
+					
+            <h4>{{ $item->title }}</h4>
             <ul>
-                <li><strong>Empowerment</strong> – Investing in women and youth.</li>
-                <li><strong>Integrity</strong> – Transparency across the value chain.</li>
-                <li><strong>Sustainability</strong> – Regenerative environmental practices.</li>
-                <li><strong>Innovation</strong> – Smart, data-driven solutions.</li>
-                <li><strong>Collaboration</strong> – Working with farmers & researchers.</li>
-                <li><strong>Excellence</strong> – Exceeding global benchmarks.</li>
+               {!! $item->contents !!}
             </ul>
 
-            <h4>Our Commitment</h4>
+            {{-- <h4>Our Commitment</h4>
             <ul>
                 <li>Empowering women farmers</li>
                 <li>Building traceable supply chains</li>
                 <li>Partnering with global leaders</li>
                 <li>Growing responsibly and sustainably</li>
-            </ul>
-
+            </ul> --}}
+@endforeach
             <!-- CONTACT BUTTON -->
             <a href="{{ route('users.contact-us') }}" class="contact-btn">Contact Us</a>
         </div>

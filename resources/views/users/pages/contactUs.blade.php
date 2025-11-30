@@ -383,8 +383,8 @@ var pbmit_js_variables = {"responsive":null,"ajaxurl":"https:\/\/agrimo-demo.pbm
 			<h2 class="pbmit-element-title">Mail us 24/7</h2>					</div>
 	</div>
 	<div class="pbmit-content-wrapper">
-		<div class="pbmit-heading-desc"><a href="https://agrimo-demo.pbminfotech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c5b5a7a8acaba3aa85a4a1a8acabeba6aaa8">[email&#160;protected]</a><br>
-<a href="https://agrimo-demo.pbminfotech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="88f8eae5e9ece5e1e6c8e1e6eee7a6ebe7e5">[email&#160;protected]</a></div>	</div>	
+		<div class="pbmit-heading-desc"><a href="" class="" data-cfemail="c5b5a7a8acaba3aa85a4a1a8acabeba6aaa8">{{$settings->site_email}}</a><br>
+</div>	</div>	
 </div>
 <div class="pbmit-ihbox-btn"><a href="#"><span class="pbmit-button-text">Read More</span><span class="pbmit-button-icon-wrapper"><span class="pbmit-button-icon"><i class="pbmit-base-icon-black-arrow-1"></i></span></span></a></div></div>				</div>
 				</div>
@@ -400,7 +400,7 @@ var pbmit_js_variables = {"responsive":null,"ajaxurl":"https:\/\/agrimo-demo.pbm
 			<h2 class="pbmit-element-title">Call us 24/7</h2>					</div>
 	</div>
 	<div class="pbmit-content-wrapper">
-		<div class="pbmit-heading-desc">Phone : (+55) 654 - 545 - 5418 <br>
+		<div class="pbmit-heading-desc">Phone : {{$settings->site_phone}} <br>
 Mobile : (+01) 654 - 545 - 1235</div>	</div>	
 </div>
 <div class="pbmit-ihbox-btn"><a href="#"><span class="pbmit-button-text">Read More</span><span class="pbmit-button-icon-wrapper"><span class="pbmit-button-icon"><i class="pbmit-base-icon-black-arrow-1"></i></span></span></a></div></div>				</div>
@@ -417,8 +417,8 @@ Mobile : (+01) 654 - 545 - 1235</div>	</div>
 			<h2 class="pbmit-element-title">Our Locations</h2>					</div>
 	</div>
 	<div class="pbmit-content-wrapper">
-		<div class="pbmit-heading-desc">4821 Ride Top, Anch St, Alaska <br>
-997998, USA main city.</div>	</div>	
+		<div class="pbmit-heading-desc">{{$settings->address}}
+</div>	</div>	
 </div>
 <div class="pbmit-ihbox-btn"><a href="#"><span class="pbmit-button-text">Read More</span><span class="pbmit-button-icon-wrapper"><span class="pbmit-button-icon"><i class="pbmit-base-icon-black-arrow-1"></i></span></span></a></div></div>				</div>
 				</div>
