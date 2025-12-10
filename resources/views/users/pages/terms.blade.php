@@ -1133,7 +1133,7 @@
         <nav class="breadcrumb" style="font-size: 16px;">
           <a href="{{ route('users.home') }}" style="color: white; text-decoration: none;">Home</a>
           <span style="color: white;"> / </span>
-          <span style="color: white;">Terms $ Condition</span>
+          <span style="color: white;">Terms & Condition</span>
         </nav>
 
     </div>
@@ -1141,9 +1141,9 @@
 </div>
    <div class="policy-container">
 
-    <h1>{{ $policy->title ?? 'Privacy Policy' }}</h1>
+    <h1>{{ $terms->title ?? 'Terms & Condiction' }}</h1>
 
-    {!! $policy->contnet !!}
+    {!! $terms->contnet !!}
 
 </div>
  
