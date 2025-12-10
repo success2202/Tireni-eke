@@ -63,7 +63,7 @@
 					<div class="pbmit-right-box d-flex align-items-center">
 						<div class="pbmit-button-box">
 												<div class="pbmit-header-button">
-				<a href="tel:+1(212)-255-511">
+				<a href="#">
 			<span class="pbmit-header-button-text-1">Call us Now</span>			<span class="pbmit-header-button-text-2">{{$settings->site_phone}}</span></a>
 					</div>
 										</div>

@@ -795,7 +795,7 @@
 
 
     <style>
-        .about-section {
+       .about-section {
             padding: 60px 5%;
             background: #ffffff;
         }
@@ -913,7 +913,7 @@
 
 
         .about-hero {
-            height: 200px;
+            height: 100px;
             background-image: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6');
             background-size: cover;
             background-position: center;
@@ -974,6 +974,37 @@
                 font-size: 14px;
             }
         }
+
+         .policy-container {
+        max-width: 900px;
+        margin: 50px auto;
+        background: #ffffff;
+        padding: 40px 30px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 20px rgba(0,0,0,0.08);
+        line-height: 1.8;
+        font-size: 16px;
+    }
+
+    .policy-container h1 {
+        font-size: 32px;
+        font-weight: 700;
+        color: #1f4e1f;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .policy-container p,
+    .policy-container li {
+        color: #444;
+        margin-bottom: 12px;
+    }
+
+    @media(max-width: 768px) {
+        .policy-container { padding: 25px 20px; }
+        .policy-container h1 { font-size: 26px; }
+    }
+
     </style>
 
 </head>
@@ -1083,10 +1114,10 @@
         </header> <!-- #masthead -->
 
      
-
-  <div class="about-hero-overlay" 
+<div class="about-hero-overlay" 
      style="
-        width: 100%; 
+        width: 100%;
+        height: 50px; 
         display: flex; 
         justify-content: center;   
         align-items: center;       
@@ -1100,62 +1131,24 @@
 
     <div class="about-hero-content" style="max-width: 600px;">
 
-        <h3 style="
-              color: #1f4e1f; 
-              font-weight: 400; 
-              margin-bottom: 10px;
-            ">
-          About Us
-        </h3>
-
         <nav class="breadcrumb" style="font-size: 16px;">
           <a href="{{ route('users.home') }}" style="color: white; text-decoration: none;">Home</a>
           <span style="color: white;"> / </span>
-          <span style="color: white;">About</span>
+          <span style="color: white;">Privacy</span>
         </nav>
 
     </div>
 </div>
+ 
+    
+  <div class="policy-container">
 
+    <h1>{{ $policy->title ?? 'Privacy Policy' }}</h1>
 
+    {!! $policy->content !!}
 
-        <div class="container about-wrapper">
-
-
-            <div class="row g-4 about-section">
-
-                <!-- COL 1: IMAGE -->
-                <div class="col-12 col-md-4">
-                    <img src="{{ asset('images/home/s8.jpeg') }}" class="about-img" alt="About Us Image">
-                </div>
-
-                <!-- COL 2: TEXT PART 1 -->
-                <div class="col-12 col-md-4">
-                    @foreach ($about as $item)
-                        <h4>{{ $item->title }}</h4>
-                        <p>
-                            {!! $item->contents !!}
-                        </p>
-                    @endforeach
-
-                </div>
-
-                <!-- COL 3: TEXT PART 2 + CONTACT BUTTON -->
-                <div class="col-12 col-md-4">
-                    @foreach ($about2 as $item)
-                        <h4>{{ $item->title }}</h4>
-                        <ul>
-                            {!! $item->contents !!}
-                        </ul>
-                    @endforeach
-                    <!-- CONTACT BUTTON -->
-                    <a href="{{ route('users.contact-us') }}" class="contact-btn">Contact Us</a>
-                </div>
-
-            </div>
-        </div>
-
-
+</div>
+ 
         @include('layouts.footer')
 
 

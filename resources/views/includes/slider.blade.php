@@ -65,7 +65,7 @@
 							--><a
 								id="slider-1-slide-1-layer-4" 
 								class="rs-layer rev-btn"
-								href="contact-us/index.html" target="_self"
+								href="{{route('users.contact-us')}}" target="_self"
 								data-type="button"
 								data-color="#404a3d"
 								data-rsp_ch="on"
@@ -79,7 +79,7 @@
 								data-frame_999="o:0;st:w;sR:6870;"
 								data-frame_hover="c:#fff;bgc:#5b8c51;bor:30px,30px,30px,30px;sp:100ms;"
 								style="z-index:10;background-color:rgba(255,255,255,1);font-family:'Signika';text-transform:capitalize;"
-							>Contact Us <span class="pbmit-button-icon-wrapper"><span class="pbmit-button-icon"><i class="pbmit-base-icon-black-arrow-1"></i></span></span> 
+							 >Contact Us <span class="pbmit-button-icon-wrapper"><span class="pbmit-button-icon"><i class="pbmit-base-icon-black-arrow-1"></i></span></span> 
 							</a><!--
 -->					</rs-slide>
 						<rs-slide style="position: absolute;" data-key="rs-2" data-title="Slide" data-thumb="images/slider/s2.jpeg" data-in="o:0;" data-out="a:false;">
@@ -144,7 +144,7 @@
 							--><a
 								id="slider-1-slide-2-layer-4" 
 								class="rs-layer rev-btn"
-								href="contact-us/index.html" target="_self"
+								href="{{route('users.contact-us')}}" target="_self"
 								data-type="button"
 								data-color="#404a3d"
 								data-rsp_ch="on"
@@ -220,10 +220,10 @@
 							>Feeling of Happiness 
 							</rs-layer><!--
 
-							--><a
+							--><a 
 								id="slider-1-slide-3-layer-4" 
 								class="rs-layer rev-btn"
-								href="contact-us/index.html" target="_self"
+								href="{{route('users.contact-us')}}" target="_self"
 								data-type="button"
 								data-color="#404a3d"
 								data-rsp_ch="on"

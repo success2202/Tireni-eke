@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>CGG Courier</title>
+    <title>Tireni Eke Global Solution</title>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 </head>
@@ -58,6 +58,7 @@
                                     {{ $data['email'] }}
                                 </td>
                             </tr>
+
                             <tr>
                                 <td>
                                     Phone
@@ -66,6 +67,16 @@
                                     {{ $data['phone'] }}
                                 </td>
                             </tr>
+
+                             <tr>
+                                <td>
+                                    Subject
+                                </td>
+                                <td>
+                                    {{ $data['subject'] }}
+                                </td>
+                            </tr>
+
                             <tr>
                                 <td>
                                     Message

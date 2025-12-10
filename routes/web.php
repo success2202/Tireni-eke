@@ -93,6 +93,8 @@ Route::controller(HomeController::class)->group(function ()
     Route::get('/about-us', 'AboutUs')->name('users.about-us');
     Route::get('/contact-us', 'ContactUs')->name('users.contact-us'); 
     Route::post('/contact/form', 'ContactForm')->name('contact-us');
+    Route::get('/pages/terms', 'Terms')->name('pages.terms');
+    Route::get('/pages/privacypolicy', 'PrivacyPolicy')->name('PrivacyPolicy');
 });
 
 // Route::get('/dashboard', function () {

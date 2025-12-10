@@ -458,8 +458,8 @@ align-items: stretch;
       <p><strong>Join us in cultivating change—one farmer, one harvest, one community at a time.</strong></p>
 
       <div class="buttons">
-        <a href="#" class="btn-main">Learn More</a>
-        <a href="#" class="btn-secondary">Partner With Us</a>
+        <a href="{{route('users.about-us')}}" class="btn-main">Learn More</a>
+        <a href="#partner-withUs" class="btn-secondary">Partner With Us</a>
       </div>
     </div>
 
@@ -496,7 +496,7 @@ align-items: stretch;
 
   <section class="services-section">
     <div class="services-title">
-      <h4 class="text-center mb-4" style="font-weight: 400; color:#1f4e1f;">What WE Do</h4>
+      <h4 class="text-center mb-4" style="font-weight: 400; color:#1f4e1f;">What We Do</h4>
       <p class="text-center mb-4" style="font-size: 18px; color:##1f4e1f;">Cultivating Fonio, Cultivating Futures</p>
     </div>
 
@@ -506,11 +506,13 @@ align-items: stretch;
         <div class="service-card">
             <img src="{{asset('images/'.$service->images)}}" alt="Service Image">
 
-            <h3>{{ $service->title }}</h3>
+            <h5 class="text-center mb-4" style="font-weight: 400; color:#1f4e1f;">{{ $service->title }} </h5>
 
-            <p>
-                {{ Str::limit(strip_tags($service->contents), 120, '...') }}
-            </p>
+            <p style="text-align: left;">
+    <div style="text-align: left;">
+        {!! $service->contents !!}
+    </div>
+</p>
         </div>
         @endforeach
     </div>
@@ -560,7 +562,7 @@ align-items: stretch;
 
 
 <!-- Impact & Partnerships Section -->
-<section class="impact-section">
+<section class="impact-section" id="partner-withUs">
   <div class="impact-container">
 
   <!-- Image -->
@@ -584,7 +586,7 @@ align-items: stretch;
         <p>We believe lasting impact comes through collaboration.</p>
         <p>We partner with development agencies, research institutions, agritech innovators, and global buyers who share our vision for a sustainable agricultural future.</p>
         <p>Together, we are not just growing crops—we’re growing capacity, confidence, and change.</p>
-        <a href="#" class="impact-btn">Explore Partnership Opportunities</a>
+        <a href="{{route('users.contact-us')}}" class="impact-btn">Explore Partnership Opportunities</a>
       </div>
     </div>
 
