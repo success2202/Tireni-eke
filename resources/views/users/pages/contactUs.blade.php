@@ -1187,7 +1187,7 @@
                                                                     </h4>
                                                                     <h2 class="pbmit-element-title">
 
-                                                                        Have a any Questions?<br>
+                                                                        Have  any Questions?<br>
                                                                         Get in Touch!
 
                                                                     </h2>
@@ -1235,9 +1235,22 @@
             <button type="submit" class="btn custom-btn">Send Message</button>
         </div>
     </div>
+
+
+    {!! NoCaptcha::renderJs() !!}
+    
 </form>
 
                                                                     </div>
+br
+
+<div>
+    {!! NoCaptcha::display() !!}
+    @error('g-recaptcha-response')
+        <span class="text-danger">{{ $message }}</span>
+    @enderror
+</div>
+
                                                                 </div>
                                                             </div>
                                                         </div>

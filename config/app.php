@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
+use Anhskohbo\NoCaptcha\Facades\NoCaptcha;
+use Anhskohbo\NoCaptcha\NoCaptchaServiceProvider;
 
 return [
 
@@ -163,6 +165,8 @@ return [
         /*
          * Application Service Providers...
          */
+        NoCaptchaServiceProvider::class,
+
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
@@ -183,6 +187,8 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        'NoCaptcha' => NoCaptcha::class,
+
     ])->toArray(),
 
 ];

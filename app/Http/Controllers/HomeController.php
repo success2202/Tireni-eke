@@ -16,7 +16,7 @@ class HomeController extends Controller
     public function Index(){
         $data['services'] = Services::latest()->get();
         $data['about'] = About::get();
-       -$data['settings'] = Setting::latest()->first();
+       $data['settings'] = Setting::latest()->first();
         return view('users.index', $data);
     }
 
@@ -42,12 +42,13 @@ class HomeController extends Controller
             'email'   => 'required|email',
             'subject' => 'required',
             'message' => 'required',
+            'g-recaptcha-response' => 'required|captcha',
         ]);
 
         $data = $request->all();
 
         // Send email to support email
-        Mail::to('support@tireni-eke-gls.com.ng')->send(new ContactMail($data));
+        Mail::to('successceejay@gmail.com')->send(new ContactMail($data));
 
         return back()->with('success', 'Your message has been sent successfully!');
 }
