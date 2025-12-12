@@ -829,7 +829,7 @@
     background: #1e9e55;
     color: #fff;
     padding: 12px 35px;
-    border-radius: 50px;
+    border-radius: 10px;
     border: none;
     font-size: 16px;
     font-weight: 600;
@@ -839,7 +839,9 @@
 .custom-btn:hover {
     background: #177c44;
 }
-
+.col-12{
+    margin-top: 10px !important;
+}
     </style>
 </head>
 
@@ -1231,25 +1233,27 @@
             <textarea name="message" class="form-control custom-textarea" rows="5" placeholder="Your Message" required></textarea>
         </div>
 
-        <div class="col-12 text-center">
-            <button type="submit" class="btn custom-btn">Send Message</button>
-        </div>
-    </div>
-
-
-    {!! NoCaptcha::renderJs() !!}
-    
-</form>
-
-                                                                    </div>
-br
+{!! NoCaptcha::renderJs() !!}
 
 <div>
     {!! NoCaptcha::display() !!}
     @error('g-recaptcha-response')
         <span class="text-danger">{{ $message }}</span>
     @enderror
-</div>
+</div> 
+
+        <div class="col-12 text-center">
+            <button type="submit" class="btn custom-btn">Send Message</button>
+        </div>
+    </div>
+
+
+    
+    
+</form>
+
+                                                                    </div>
+
 
                                                                 </div>
                                                             </div>
