@@ -1233,7 +1233,7 @@
             <textarea name="message" class="form-control custom-textarea" rows="5" placeholder="Your Message" required></textarea>
         </div>
 
-{!! NoCaptcha::renderJs() !!}
+
 
 <div>
     {!! NoCaptcha::display() !!}
@@ -1251,6 +1251,7 @@
     
     
 </form>
+{!! NoCaptcha::renderJs() !!}
 
                                                                     </div>
 
@@ -1266,7 +1267,20 @@
                                         </section>
 
 @if(session('success'))
-    <div style="color: green;">
+    <div id="successPopup" 
+         style="
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #28a745;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+            z-index: 9999;
+            font-weight: 600;
+            animation: fadeIn 0.5s ease;
+         ">
         {{ session('success') }}
     </div>
 @endif
@@ -1309,6 +1323,18 @@
 
         </div><!-- .site-content-contain -->
     </div><!-- #page -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const popup = document.getElementById('successPopup');
+        if (popup) {
+            setTimeout(() => {
+                popup.style.transition = "opacity 0.8s";
+                popup.style.opacity = 0;
+                setTimeout(() => popup.remove(), 800);
+            }, 3000); // disappears after 3 seconds
+        }
+    });
+</script>
 
 
     <script>
