@@ -263,7 +263,7 @@ class SettingsController extends Controller
 
     public function TermsConditionsStore(Request $request){
         $data = [
-            'content' => $request->content,
+            'content' => $request->contnet,
         ];
     
         TermsCondition::firstOrCreate([], $data);
@@ -283,7 +283,7 @@ class SettingsController extends Controller
     public function TermsConditionsUpdate(Request $request, $id)
     {  
         $record = TermsCondition::where('id', decrypt($id))->first();
-        $record->content = $request->input('content');
+        $record->contnet = $request->input('content');
         $record->save();
         Session::flash('alert', 'success');
         Session::flash('message', 'Terms Conditions updated Successfully');

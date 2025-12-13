@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('admin.layouts.admin')
 @section('content')
 @if(Session::has('alert'))
 <div class="alert alert-{{ Session::get('alert') }}">
@@ -15,7 +15,7 @@
                             </a>
                         </div>
                         <div class="app-sidebar-menu">
-                            @include('manage.settings.sidebar')
+                            @include('admin.settings.sidebar')
                         </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                         </h6>
                             
                             <div data-label="Terms and Conditions Content Text" class="demo-code-preview">
-                                {!! $termscondition->content !!}
+                                {!! $termscondition->contnet !!}
                             </div>
                             {{-- <div data-label="Slider Content Text" class="demo-code-preview">
                                 {{$ss->content}}
