@@ -8,7 +8,7 @@ use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SliderController;
-
+use Mews\Captcha\Facades\Captcha;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -79,6 +79,20 @@ Route::controller(ManagePagesController::class)->group(function(){
         Route::post('/settings/update/settings', 'UpdateSettings')->name('settings.updateSettings');
         Route::get('/admin/user', 'UserAccount')->name('userAccount');
         Route::post('/admin/uuser/account', 'UpdateAccount')->name('UpdateAccount');
+
+                   
+            Route::get('/website/settings/privacypolicy',  'PrivacyPolicy')->name('admin.settings.privacyPolicy');
+            Route::get('/website/settings/privacypolicy/create',  'PrivacyPolicyCreate')->name('admin.settings.createprivacy');
+            Route::post('/website/settings/privacypolicy/store',  'PrivacyPolicyStore')->name('admin.settings.storePrivacy');
+            Route::get('/website/settings/edit/privacypolicy/{id}',  'PrivacyPolicyEdit')->name('admin.settings.privaprivacyEdit');
+            Route::post('/website/update/privacypolicy/{id}',  'PrivaprivacyUpdate')->name('admin.settings.privaprivacyUpdate');
+            Route::get('/website/delete/privacypolicy/{id}',  'PrivacyPolicyDelete')->name('admin.settings.privaprivacyDelete');
+            Route::get('/website/settings/terms/conditions',  'TermsConditions')->name('admin.settings.termsConditions');
+            Route::get('/website/settings/termsConditions/create',  'TermsConditionsCreate')->name('admin.settings.createtermsConditions');
+            Route::post('/website/settings/termsConditions/create',  'TermsConditionsStore')->name('admin.settings.storetermsConditions');
+            Route::get('/website/edit/termsConditions/{id}',  'TermsConditionsEdit')->name('admin.settings.termsConditionsEdit');
+            Route::post('/website/update/termsConditions/{id}',  'TermsConditionsUpdate')->name('admin.settings.termsConditionsUpdate');
+            Route::get('/website/delete/termsConditions/{id}',  'TermsConditionsDelete')->name('admin.settings.termsConditionsDelete');
     });
 
   
@@ -96,6 +110,14 @@ Route::controller(HomeController::class)->group(function ()
     Route::get('/pages/terms', 'Terms')->name('pages.terms');
     Route::get('/pages/privacypolicy', 'PrivacyPolicy')->name('PrivacyPolicy');
 });
+
+
+
+Route::get('/refresh-captcha', function () {
+    return response()->json(['captcha' => captcha_src()]);
+})->name('refresh.captcha');
+
+
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

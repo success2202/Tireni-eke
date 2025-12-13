@@ -96,7 +96,8 @@
             <div class="pbmit-footer-text-inner">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="pbmit-footer-copyright-text-area"> Copyright © 2024 <a
+                        <div class="pbmit-footer-copyright-text-area"> Copyright © {{ date('Y') }}
+ <a
                                 href="https://agrimo-demo.pbminfotech.com/demo1/"></a>
                             <p>{{ $settings->site_name }}</p>
                         </div>

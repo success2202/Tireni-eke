@@ -165,7 +165,7 @@ return [
         /*
          * Application Service Providers...
          */
-        NoCaptchaServiceProvider::class,
+        Mews\Captcha\CaptchaServiceProvider::class,
 
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
