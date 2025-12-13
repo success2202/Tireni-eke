@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Setting;
 use Illuminate\Support\Facades\Session;
-
+use App\Models\Privacypolicy;
+use App\Models\TermsCondition;
 class SettingsController extends Controller
 {
     //
@@ -186,7 +187,7 @@ class SettingsController extends Controller
 
     public function PrivacyPolicy(){
         $privacypolicy = Privacypolicy::first();
-        return view('manage.privacy.index')
+        return view('admin.privacy.index')
         ->with('bheading', 'Website Settings')
         ->with('breadcrumb', 'Website Settings')
         ->with('privacypolicy',  $privacypolicy);
@@ -194,7 +195,7 @@ class SettingsController extends Controller
 
     public function PrivacyPolicyCreate(){
         $privacypolicy = Privacypolicy::first();
-        return view('manage.privacy.create')
+        return view('admin.privacy.create')
         ->with('bheading', 'Website Settings')
         ->with('breadcrumb', 'Website Settings')
         ->with('privacypolicy',  $privacypolicy);
@@ -214,7 +215,7 @@ class SettingsController extends Controller
 
     public function PrivacyPolicyEdit($id){
         $privacypolicy = Privacypolicy::where('id', decrypt($id))->first();
-        return view('manage.privacy.edit')
+        return view('admin.privacy.edit')
         ->with('bheading', 'Website Settings')
         ->with('breadcrumb', 'Website Settings')
         ->with('privacypolicy',  $privacypolicy);
@@ -248,14 +249,14 @@ class SettingsController extends Controller
 
     public function TermsConditions(){
         $termscondition = TermsCondition::first();
-        return view('manage.termsConditions.index')
+        return view('admin.termsConditions.index')
         ->with('bheading', 'Website Settings')
         ->with('breadcrumb', 'Website Settings')
         ->with('termscondition',  $termscondition);
     }
 
     public function  TermsConditionsCreate(){
-        return view('manage.termsConditions.create')
+        return view('admin.termsConditions.create')
         ->with('bheading', 'Website Settings')
         ->with('breadcrumb', 'Website Settings');
     }
@@ -273,7 +274,7 @@ class SettingsController extends Controller
 
     public function TermsConditionsEdit($id){
         $termsConditions = TermsCondition::where('id', decrypt($id))->first();
-        return view('manage.termsConditions.edit')
+        return view('admin.termsConditions.edit')
         ->with('bheading', 'Website Settings')
         ->with('breadcrumb', 'Website Settings')
         ->with('termsConditions',  $termsConditions);

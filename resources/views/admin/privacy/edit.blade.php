@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('admin.layouts.admin')
 @section('content')
 @if(Session::has('alert'))
 <div class="alert alert-{{ Session::get('alert') }}">
@@ -14,7 +14,7 @@
                            Website Setup
                         </div>
                         <div class="app-sidebar-menu">
-                            @include('manage.settings.sidebar')
+                            @include('admin.settings.sidebar')
                            
                         </div>
                     </div>

@@ -79,20 +79,19 @@ Route::controller(ManagePagesController::class)->group(function(){
         Route::post('/settings/update/settings', 'UpdateSettings')->name('settings.updateSettings');
         Route::get('/admin/user', 'UserAccount')->name('userAccount');
         Route::post('/admin/uuser/account', 'UpdateAccount')->name('UpdateAccount');
-
-                   
-            Route::get('/website/settings/privacypolicy',  'PrivacyPolicy')->name('admin.settings.privacyPolicy');
-            Route::get('/website/settings/privacypolicy/create',  'PrivacyPolicyCreate')->name('admin.settings.createprivacy');
-            Route::post('/website/settings/privacypolicy/store',  'PrivacyPolicyStore')->name('admin.settings.storePrivacy');
-            Route::get('/website/settings/edit/privacypolicy/{id}',  'PrivacyPolicyEdit')->name('admin.settings.privaprivacyEdit');
-            Route::post('/website/update/privacypolicy/{id}',  'PrivaprivacyUpdate')->name('admin.settings.privaprivacyUpdate');
-            Route::get('/website/delete/privacypolicy/{id}',  'PrivacyPolicyDelete')->name('admin.settings.privaprivacyDelete');
-            Route::get('/website/settings/terms/conditions',  'TermsConditions')->name('admin.settings.termsConditions');
-            Route::get('/website/settings/termsConditions/create',  'TermsConditionsCreate')->name('admin.settings.createtermsConditions');
-            Route::post('/website/settings/termsConditions/create',  'TermsConditionsStore')->name('admin.settings.storetermsConditions');
-            Route::get('/website/edit/termsConditions/{id}',  'TermsConditionsEdit')->name('admin.settings.termsConditionsEdit');
-            Route::post('/website/update/termsConditions/{id}',  'TermsConditionsUpdate')->name('admin.settings.termsConditionsUpdate');
-            Route::get('/website/delete/termsConditions/{id}',  'TermsConditionsDelete')->name('admin.settings.termsConditionsDelete');
+        
+        Route::get('/website/settings/privacypolicy',  'PrivacyPolicy')->name('settings.privacyPolicy');
+        Route::get('/website/settings/privacypolicy/create',  'PrivacyPolicyCreate')->name('settings.createprivacy');
+        Route::post('/website/settings/privacypolicy/store',  'PrivacyPolicyStore')->name('settings.storePrivacy');
+        Route::get('/website/settings/edit/privacypolicy/{id}',  'PrivacyPolicyEdit')->name('settings.privaprivacyEdit');
+        Route::post('/website/update/privacypolicy/{id}',  'PrivaprivacyUpdate')->name('settings.privaprivacyUpdate');
+        Route::get('/website/delete/privacypolicy/{id}',  'PrivacyPolicyDelete')->name('settings.privaprivacyDelete');
+        Route::get('/website/settings/terms/conditions',  'TermsConditions')->name('settings.termsConditions');
+        Route::get('/website/settings/termsConditions/create',  'TermsConditionsCreate')->name('settings.createtermsConditions');
+        Route::post('/website/settings/termsConditions/create',  'TermsConditionsStore')->name('settings.storetermsConditions');
+        Route::get('/website/edit/termsConditions/{id}',  'TermsConditionsEdit')->name('settings.termsConditionsEdit');
+        Route::post('/website/update/termsConditions/{id}',  'TermsConditionsUpdate')->name('settings.termsConditionsUpdate');
+        Route::get('/website/delete/termsConditions/{id}',  'TermsConditionsDelete')->name('settings.termsConditionsDelete');
     });
 
   
