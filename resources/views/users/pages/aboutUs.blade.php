@@ -601,6 +601,61 @@
                 font-size: 14px;
             }
         }
+
+
+       .page-hero {
+    position: relative;
+    width: 100%;
+    min-height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #1f4e1f;
+    overflow: hidden;
+}
+
+/* Leaf stem */
+.page-hero::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    align-content: center;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 270px;
+
+    background-image: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6");
+    background-repeat: repeat;
+    background-size: contain;
+    opacity: 0.35;
+}
+
+/* Content stays on top */
+.page-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.page-hero h3 {
+    color: #ffffff;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.breadcrumb {
+    font-size: 16px;
+}
+
+.breadcrumb a,
+.breadcrumb span {
+    color: #e8ffe8;
+    text-decoration: none;
+}
+
+
     </style>
 
 </head>
@@ -710,39 +765,19 @@
         </header> <!-- #masthead -->
 
      
+<div class="page-hero">
+    <div class="page-hero-content">
+        <h3>About Us</h3>
 
-  <div class="about-hero-overlay" 
-     style="
-        width: 100%; 
-        display: flex; 
-        justify-content: center;   
-        align-items: center;       
-        text-align: center; 
-        padding: 50px 20px;
-        background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Leaf_icon_01.svg/512px-Leaf_icon_01.svg.png') !important;
-        background-repeat: no-repeat;
-        background-size: 220px auto;
-        background-position: left center;   /* MOVED LEFT */
-     ">
-
-    <div class="about-hero-content" style="max-width: 600px;">
-
-        <h3 style="
-              color: #1f4e1f; 
-              font-weight: 400; 
-              margin-bottom: 10px;
-            ">
-          About Us
-        </h3>
-
-        <nav class="breadcrumb" style="font-size: 16px;">
-          <a href="{{ route('users.home') }}" style="color: white; text-decoration: none;">Home</a>
-          <span style="color: white;"> / </span>
-          <span style="color: white;">About</span>
+        <nav class="breadcrumb">
+            <a href="{{ route('users.home') }}">Home</a>
+            <span>/</span>
+            <span>About</span>
         </nav>
-
     </div>
 </div>
+
+
 
 
 

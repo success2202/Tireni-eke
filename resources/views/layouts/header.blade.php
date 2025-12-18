@@ -90,7 +90,7 @@
 	</div><!-- pbmit-header-height-wrapper-end -->
 </div><!-- pbmit-header-overlay-end -->
 
-@include('includes.slider')	
+@include('includes.slider')
 
 
 </header> <!-- #masthead -->

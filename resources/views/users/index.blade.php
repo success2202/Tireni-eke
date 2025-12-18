@@ -172,6 +172,7 @@ body {
         font-weight: 700;
         margin-bottom: 12px;
         color: #1f4e1f; /* Green */
+        
     }
 
     .about-section {

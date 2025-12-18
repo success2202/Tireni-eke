@@ -18,6 +18,9 @@
 	<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
 <link rel="alternate" type="application/rss+xml" title="Agrimo Demo 2 &raquo; Feed" href="feed/index.html" />
 <link rel="alternate" type="application/rss+xml" title="Agrimo Demo 2 &raquo; Comments Feed" href="comments/feed/index.html" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 <script>
 window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/agrimo-demo.pbminfotech.com\/demo2\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.3"}};
 /*! This file is auto-generated */
@@ -48,13 +51,13 @@ text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.
 :where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
 :root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
 </style>
-<link rel='stylesheet' id='pbmdock-style-css' href='wp-content/plugins/pbminfotech-theme-dock/css/style32d4.css?ver=6.8.3' media='all' />
+{{-- <link rel='stylesheet' id='pbmdock-style-css' href='wp-content/plugins/pbminfotech-theme-dock/css/style32d4.css?ver=6.8.3' media='all' />
 <link rel='stylesheet' id='contact-form-7-css' href='wp-content/plugins/contact-form-7/includes/css/stylesfc7a.css?ver=6.0.6' media='all' />
 <link rel='stylesheet' id='woocommerce-layout-css' href='wp-content/plugins/woocommerce/assets/css/woocommerce-layoutb7af.css?ver=10.0.3' media='all' />
 <link rel='stylesheet' id='woocommerce-smallscreen-css' href='wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreenb7af.css?ver=10.0.3' media='only screen and (max-width: 768px)' />
 <link rel='stylesheet' id='woocommerce-general-css' href='wp-content/plugins/woocommerce/assets/css/woocommerceb7af.css?ver=10.0.3' media='all' />
-<style id='woocommerce-inline-inline-css'>
-.woocommerce form .form-row .required { visibility: visible; }
+<style id='woocommerce-inline-inline-css'> --}}
+{{-- .woocommerce form .form-row .required { visibility: visible; } --}}
 </style>
 <link rel='stylesheet' id='brands-styles-css' href='wp-content/plugins/woocommerce/assets/css/brandsb7af.css?ver=10.0.3' media='all' />
 <link rel='stylesheet' id='pbmit-agrimo-header-style-css' href='wp-content/themes/agrimo/css/header/header-style-2.min32d4.css?ver=6.8.3' media='all' />
@@ -114,7 +117,7 @@ var woocommerce_params = {"ajax_url":"\/demo2\/wp-admin\/admin-ajax.php","wc_aja
 var pbmit_js_variables = {"responsive":null,"ajaxurl":"https:\/\/agrimo-demo.pbminfotech.com\/demo2\/wp-admin\/admin-ajax.php","ajaxnonce":"4cbb1d4f63","ajaxnonce_ajax_pagination":"77435c722e","ajaxnonce_sortcat":"e34a0a6e1c"};
 </script>
 <script src="wp-content/themes/agrimo/js/core.min32d4.js?ver=6.8.3" id="pbmit-core-script-js"></script>
-<script src="wp-content/themes/agrimo/js/elementor.min32d4.js?ver=6.8.3" id="pbmit-elementor-script-js"></script>
+{{-- <script src="wp-content/themes/agrimo/js/elementor.min32d4.js?ver=6.8.3" id="pbmit-elementor-script-js"></script>
 <script src="wp-content/themes/agrimo/js/lottie-player.min32d4.js?ver=6.8.3" id="lottie-player-js"></script>
 <script src="wp-content/themes/agrimo/js/gsap.min32d4.js?ver=6.8.3" id="gsap-js"></script>
 <script src="wp-content/themes/agrimo/js/ScrollTrigger32d4.js?ver=6.8.3" id="scrolltrigger-js"></script>
@@ -126,7 +129,7 @@ var pbmit_js_variables = {"responsive":null,"ajaxurl":"https:\/\/agrimo-demo.pbm
 <meta name="generator" content="WordPress 6.8.3" />
 <meta name="generator" content="WooCommerce 10.0.3" />
 <link rel="canonical" href="index.html" />
-<link rel='shortlink' href='index.html' />
+<link rel='shortlink' href='index.html' /> --}}
 <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="wp-json/oembed/1.0/embed738e.json?url=https%3A%2F%2Fagrimo-demo.pbminfotech.com%2Fdemo2%2F" />
 <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="wp-json/oembed/1.0/embed04aa?url=https%3A%2F%2Fagrimo-demo.pbminfotech.com%2Fdemo2%2F&amp;format=xml" />
 <style>.pbmit-ihbox-style-1 .pbmit-ihbox-icon-type-image img {
@@ -213,6 +216,81 @@ var pbmit_js_variables = {"responsive":null,"ajaxurl":"https:\/\/agrimo-demo.pbm
 		background-color: white !important;
 	}
 	
+
+
+
+
+	.hero-slider {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+
+.heroSwiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-overlay {
+    text-align: center;
+    background: rgba(0,0,0,0.45);
+    padding: 20px;
+    border-radius: 16px;
+    color: #fff;
+    max-width: 800px;
+}
+
+.slide-tag {
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 6px 18px;
+    border-radius: 10px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.slide-overlay h1 {
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 30px;
+	color: white;
+}
+
+.slide-btn {
+    display: inline-block;
+    background: #ffffff;
+    color: #1f4e1f;
+	font-size: 16px;
+    padding: 14px 34px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.slide-btn:hover {
+    background: #5b8c51;
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .slide-overlay h1 {
+        font-size: 38px;
+    }
+    .slide-overlay {
+        padding: 30px;
+    }
+}
+
 		</style>
 </head>
 <body class="home wp-singular page-template-default page page-id-1558 wp-theme-agrimo theme-agrimo woocommerce-no-js  pbmit-top-menu-total-6 pbmit-sidebar-no elementor-default elementor-kit-6 elementor-page elementor-page-1558">
@@ -226,7 +304,8 @@ var pbmit_js_variables = {"responsive":null,"ajaxurl":"https:\/\/agrimo-demo.pbm
 	
 
 
-					
+</div>
+</div>			
 			<!-- #page -->
 @include('layouts.footer')
 
