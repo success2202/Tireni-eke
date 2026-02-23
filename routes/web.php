@@ -31,8 +31,34 @@ Route::group(['prefix' => 'manage', 'as' => 'admin.'], function(){
 });
 
 
+Route::get('reset-password', function () {
+    return view('auth.reset-password');
+})->name('password.request');
+Route::post('forgot-password', function (\Illuminate\Http\Request $request) {
+    $request->validate(['email' => 'required|email']);
+
+    $status = \Illuminate\Support\Facades\Password::sendResetLink(
+        $request->only('email')
+    );
+
+    return $status === \Illuminate\Support\Facades\Password::RESET_LINK_SENT
+        ? back()->with('status', __($status))
+        : back()->withErrors(['email' => __($status)]);
+})->name('password.email');
+
+Route::get('reset-password/{token}', function ($token) {
+    return view('auth.resetpassword', ['token' => $token]);
+})->name('password.reset');
+
+Route::post('reset-password', 'App\Http\Controllers\Auth\ResetPasswordController@reset')->name('password.update');
+// Route::controller(ResetPasswordController::class)->group(function(){
+//     Route::get('/reset-password/{token}', 'showResetForm')->name('password.reset');
+//     Route::post('/reset-password', 'resetPassword')->name('password.update');
+//     Route::post('/forgot-password', 'sendResetLink')->name('password.email');
+//     Route::get('/reset-password/{token}', 'showResetForm')->name('password.reset');
+// });
 Route::controller(ManagePagesController::class)->group(function(){
-        Route::get('/pages', 'Index')->name('manage.pages');
+        Route::get('/pages', 'Index')->name('manage.pages');                        
         Route::get('/pages/create/',  'PagesCreate')->name('Pages.Create');
         Route::post('/pages/store/', 'PagesStore')->name('PagesStore');
         Route::get('/pages/edit/{id}',  'PagesEdit')->name('PagesEdit');
